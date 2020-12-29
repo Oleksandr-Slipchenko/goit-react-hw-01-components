@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import defaultImage from '../social-profile/preview.png';
 
 // class изменил на className
 
-function Profile({ avatar, name, tag, location, stats }) {
+function Profile({ avatar = defaultImage, name, tag, location, stats }) {
   return (
     <div className="profile">
       <div className="description">
@@ -30,9 +31,6 @@ function Profile({ avatar, name, tag, location, stats }) {
     </div>
   );
 }
-Profile.defaultProps = {
-  avatar: 'https://www.flaticon.com/svg/static/icons/svg/3784/3784184.svg',
-};
 
 Profile.propTypes = {
   avatar: PropTypes.string,

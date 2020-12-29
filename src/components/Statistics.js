@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 // class изменил на className
 
-function Statistics({ title, stats }) {
+function Statistics({ title = '', stats }) {
   return (
     <section className="statistics">
       {title && <h2 className="title">{title}</h2>}
@@ -19,10 +19,6 @@ function Statistics({ title, stats }) {
     </section>
   );
 }
-
-Statistics.defaultProps = {
-  title: '',
-};
 
 Statistics.propTypes = {
   title: PropTypes.string,
