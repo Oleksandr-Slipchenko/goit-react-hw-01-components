@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import defaultImage from '../social-profile/preview.png';
+import defaultImage from '../Profile/preview.png';
 
 // class изменил на className
 
@@ -8,7 +8,7 @@ function Profile({ avatar = defaultImage, name, tag, location, stats }) {
   return (
     <div className="profile">
       <div className="description">
-        <img src={avatar} alt={name} className="avatar" />
+        <img src={avatar} width="120" alt={name} className="avatar" />
         <p className="name">{name}</p>
         <p className="tag">@{tag}</p>
         <p className="location">{location}</p>
