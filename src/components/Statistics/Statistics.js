@@ -1,18 +1,19 @@
 import React from 'react';
+import s from './Statistics.module.css';
 import PropTypes from 'prop-types';
 
 // class изменил на className
 
 function Statistics({ title = '', stats }) {
   return (
-    <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
+    <section className={s.statistics}>
+      {title && <h2 className={s.title}>{title}</h2>}
 
-      <ul className="stat-list">
+      <ul className={s.statList}>
         {stats.map(data => (
-          <li className="item" key={data.id}>
-            <span className="label">{data.label}</span>
-            <span className="percentage">{data.percentage}</span>
+          <li className={s.item} key={data.id}>
+            <span className={s.label}>{data.label}</span>
+            <span className={s.percentage}>{data.percentage}</span>
           </li>
         ))}
       </ul>

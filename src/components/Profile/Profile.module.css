@@ -1,0 +1,28 @@
+.profile {
+  padding: 15px 20px;
+  margin-bottom: 100px;
+  width: 300px;
+  height: auto;
+
+  text-align: center;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
+    0px 2px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+.avatar {
+  border-radius: 50%;
+}
+.name {
+  font-weight: bold;
+  font-size: 20px;
+}
+.stats {
+  display: inline-flex;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.flex {
+  display: grid;
+  margin-right: 10px;
+}

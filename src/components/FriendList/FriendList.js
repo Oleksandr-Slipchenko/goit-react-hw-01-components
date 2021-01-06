@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import s from './FriendList.module.css';
+// import './FriendList.module.css';
+import s from './FriendList.module.css';
 
-// function FriendList({ children }) {
-//   return <ul className="friend-list">{children}</ul>;
-// }
 function FriendList({ friends }) {
-  // const isOnline = true;
   return (
-    <ul className="friend-list">
+    <ul className={s.friend}>
       {friends.map(FriendListItem => (
         <li className="item" key={FriendListItem.id}>
           <span
@@ -44,3 +41,9 @@ FriendList.propTypes = {
 };
 
 export default FriendList;
+
+// Для подключения children (FriendListItem)
+
+// function FriendList({ children }) {
+//   return <ul className="friend-list">{children}</ul>;
+// }
