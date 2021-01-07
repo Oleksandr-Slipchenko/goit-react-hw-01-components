@@ -2,8 +2,6 @@ import React from 'react';
 import s from './Statistics.module.css';
 import PropTypes from 'prop-types';
 
-// class изменил на className
-
 function Statistics({ title = '', stats }) {
   return (
     <div className={s.box}>
@@ -22,10 +20,6 @@ function Statistics({ title = '', stats }) {
     </div>
   );
 }
-
-// function randomCol(params) {
-//   return '#' + Math.floor(Math.random() * 16777215).toString(16);
-// }
 
 Statistics.propTypes = {
   title: PropTypes.string,

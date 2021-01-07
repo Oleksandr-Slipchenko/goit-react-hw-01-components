@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import s from './Profile.module.css';
 import defaultImage from '../Profile/preview.png';
 
-// class изменил на className
-
 function Profile({ avatar = defaultImage, name, tag, location, stats }) {
   return (
     <div className={s.profile}>
