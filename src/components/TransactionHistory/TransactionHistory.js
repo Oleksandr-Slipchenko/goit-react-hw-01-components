@@ -1,25 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-// class изменил на className
+import s from './TransactionHistory.module.css';
 
 function TransactionHistory({ items }) {
   return (
-    <table className="transaction-history">
+    <table className={s.transactionHistory}>
       <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+        <tr className={s.title}>
+          <th className={s.titleItem}>Type</th>
+          <th className={s.titleItem}>Amount</th>
+          <th className={s.titleItem}>Currency</th>
         </tr>
       </thead>
 
       <tbody>
         {items.map(item => (
-          <tr key={item.id}>
-            <td>{item.type}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
+          <tr className={s.items} key={item.id}>
+            <td className={s.item}>{item.type}</td>
+            <td className={s.item}>{item.amount}</td>
+            <td className={s.item}>{item.currency}</td>
           </tr>
         ))}
       </tbody>

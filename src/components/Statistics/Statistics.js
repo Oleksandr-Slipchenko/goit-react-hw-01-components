@@ -6,20 +6,26 @@ import PropTypes from 'prop-types';
 
 function Statistics({ title = '', stats }) {
   return (
-    <section className={s.statistics}>
-      {title && <h2 className={s.title}>{title}</h2>}
+    <div className={s.box}>
+      <section className={s.statistics}>
+        {title && <h2 className={s.title}>{title}</h2>}
 
-      <ul className={s.statList}>
-        {stats.map(data => (
-          <li className={s.item} key={data.id}>
-            <span className={s.label}>{data.label}</span>
-            <span className={s.percentage}>{data.percentage}</span>
-          </li>
-        ))}
-      </ul>
-    </section>
+        <ul className={s.statList}>
+          {stats.map(data => (
+            <li className={s.item} key={data.id}>
+              <span className={s.label}>{data.label}</span>
+              <span className={s.percentage}>{data.percentage}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
   );
 }
+
+// function randomCol(params) {
+//   return '#' + Math.floor(Math.random() * 16777215).toString(16);
+// }
 
 Statistics.propTypes = {
   title: PropTypes.string,

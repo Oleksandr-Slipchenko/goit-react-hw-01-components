@@ -1,10 +1,36 @@
+.box {
+  width: max-content;
+  background-color: rgb(240, 234, 234);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
 .statistics {
   padding: 15px 20px;
-  margin-bottom: 30px;
-  width: 300px;
+  max-width: 300px;
   height: auto;
 
   text-align: center;
+  background-color: #fff;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
     0px 2px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+.statList {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.title {
+  display: block;
+}
+.item {
+  margin-right: 5px;
+  width: 40px;
+  border: solid 1px;
+}
+.label {
+  display: block;
 }

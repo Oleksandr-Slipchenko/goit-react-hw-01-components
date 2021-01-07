@@ -1,0 +1,32 @@
+.friend {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 0px;
+  list-style: none;
+}
+.status {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+.item {
+  display: flex;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  width: 300px;
+  height: auto;
+
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
+    0px 2px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+.avatar {
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+.name {
+  font-weight: bold;
+}
