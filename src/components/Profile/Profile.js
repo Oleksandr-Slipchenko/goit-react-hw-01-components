@@ -1,4 +1,5 @@
 import React from 'react';
+import Stats from './Stats';
 import PropTypes from 'prop-types';
 import s from './Profile.module.css';
 import defaultImage from '../Profile/preview.png';
@@ -13,7 +14,9 @@ function Profile({ avatar = defaultImage, name, tag, location, stats }) {
         <p className={s.location}>{location}</p>
       </div>
 
-      <ul className={s.stats}>
+      {/* Мой вариант выполнения ДЗ без Stats.js и (<Stats {...stats} />)*/}
+
+      {/* <ul className={s.stats}>
         <li className={s.flex}>
           <span className={s.label}>Followers</span>
           <span className={s.quantity}>{stats.followers}</span>
@@ -26,7 +29,9 @@ function Profile({ avatar = defaultImage, name, tag, location, stats }) {
           <span className={s.label}>Likes</span>
           <span className={s.quantity}>{stats.likes}</span>
         </li>
-      </ul>
+      </ul> */}
+
+      <Stats {...stats} />
     </div>
   );
 }

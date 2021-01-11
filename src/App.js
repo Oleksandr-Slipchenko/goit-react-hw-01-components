@@ -1,13 +1,22 @@
 import React from 'react';
-import Profile from './components/Profile/Profile';
-import user from './components/Profile/user.json';
-import Statistics from './components/Statistics/Statistics';
-import statisticalData from './components/Statistics/statistical-data.json';
-import FriendList from './components/FriendList/FriendList';
+
+// import Profile from './components/Profile/Profile';
+import Profile from './components/Profile/index';
+
+// import Statistics from './components/Statistics/Statistics';
+import Statistics from './components/Statistics/index';
+
+// import FriendList from './components/FriendList/FriendList';
+import FriendList from './components/FriendList/index';
 // import FriendListItem from './FriendList/FriendListItem';
-import friends from './components/FriendList/friends.json';
-import TransactionHistory from './components/TransactionHistory/TransactionHistory';
-import transactions from './components/TransactionHistory/transactions.json';
+
+// import TransactionHistory from './components/TransactionHistory/TransactionHistory';
+import TransactionHistory from './components/TransactionHistory/index';
+
+import user from './components/data/user.json';
+import statisticalData from './components/data/statistical-data.json';
+import friends from './components/data/friends.json';
+import transactions from './components/data/transactions.json';
 
 export default function App() {
   return (
@@ -25,9 +34,6 @@ export default function App() {
       />
       <Statistics title="Upload stats" stats={statisticalData} />
       <Statistics stats={statisticalData} />
-      {/* <FriendList>
-        <FriendListItem friends={friends} />
-      </FriendList> */}
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
     </>

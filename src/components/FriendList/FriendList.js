@@ -1,34 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import FriendListItem from './FriendListItem';
 import s from './FriendList.module.css';
 
 function FriendList({ friends }) {
-  return (
-    <ul className={s.friend}>
-      {friends.map(FriendListItem => (
-        <li className={s.item} key={FriendListItem.id}>
-          <span
-            className={s.status}
-            style={{
-              backgroundColor: FriendListItem.isOnline ? 'green' : 'red',
-            }}
-          ></span>
-          <img
-            className={s.avatar}
-            src={FriendListItem.avatar}
-            alt=""
-            width="48"
-            style={{
-              border: FriendListItem.isOnline
-                ? 'solid 2px green'
-                : 'solid 2px red',
-            }}
-          />
-          <p className={s.name}>{FriendListItem.name}</p>
-        </li>
-      ))}
-    </ul>
-  );
+  if (friends.length === 0) return null;
+  return <ul className={s.friend}>{friends.map(FriendListItem)}</ul>;
 }
 
 FriendList.propTypes = {
@@ -44,8 +21,34 @@ FriendList.propTypes = {
 
 export default FriendList;
 
-// Для подключения children (FriendListItem)
+// Мой вариант ДЗ без подключения FriendListItem
 
-// function FriendList({ children }) {
-//   return <ul className="friend-list">{children}</ul>;
+// function FriendList({ friends }) {
+//   if (friends.length === 0) return null;
+//   return (
+//     <ul className={s.friend}>
+//       {friends.map(friendListItem => (
+//         <li className={s.item} key={friendListItem.id}>
+//           <span
+//             className={s.status}
+//             style={{
+//               backgroundColor: friendListItem.isOnline ? 'green' : 'red',
+//             }}
+//           ></span>
+//           <img
+//             className={s.avatar}
+//             src={friendListItem.avatar}
+//             alt=""
+//             width="48"
+//             style={{
+//               border: friendListItem.isOnline
+//                 ? 'solid 2px green'
+//                 : 'solid 2px red',
+//             }}
+//           />
+//           <p className={s.name}>{friendListItem.name}</p>
+//         </li>
+//       ))}
+//     </ul>
+//   );
 // }
